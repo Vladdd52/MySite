@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Практика №2</title>
+</head>
+<style>
+    a {
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        color: #000000;
+        font-size: 1.2em;
+        padding: 10px 20px;
+        border: 2px solid #000000;
+        display: inline-block;
+        transition: 0.3s;
+    }
+    a:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+</style>
+<body>
+    <h2>Задание 1</h2>
+    <b>Маркированный список</b>
+    <ul type="square">
+        <li>Сливы</li>
+        <li>Груши</li>
+        <li>Яблоки</li>
+    </ul>
+    <b>Нумерованный список</b>
+    <ol>
+        <li>Информатика</li>
+        <li>Английский язык</li>
+        <li>Математика</li>
+        <li>История</li>
+    </ol>
+    <b>Многоуровневый список</b>
+    <ul type="circle">
+        <li>Продажа и бронирование авиабилетов</li>
+        <p>Туристические поездки: </p>
+        <ol type="I">
+            <li>Испания,</li>
+            <li>Греция, </li>
+            <li>Таиланд,</li>
+            <li>Коста-Рика,</li>
+            <li>Мексика и другие страны мира.</li>
+            <p></p>
+        </ol>
+        <li>Иммиграция и визы</li>
+        <li>Обучение за рубежом</li>
+    </ul>
+    <h2>Задание 2</h2>
+    <table border="1">
+        <caption>Таблица 1</caption>
+        <tr>
+            <td>Первая колонка</td>
+            <td>Вторая колонка</td>
+            <td>Третья колонка</td>
+        </tr>
+        <tr>
+            <td>Первая колонка</td>
+            <td>Вторая колонка</td>
+            <td>Третья колонка</td>
+        </tr>
+    </table>
+    <p></p>
+    <table border="2" &amp border color="#800000" &amp bgcolor="#008080">
+        <caption>Таблица 2</caption>
+        <tr>
+            <td bgcolor="yellow">Первая колонка</td>
+            <td>Вторая колонка</td>
+            <td bgcolor="yellow">Третья колонка</td>
+        </tr>
+        <tr>
+            <td>Первая колонка</td>
+            <td bgcolor="yellow">Вторая колонка</td>
+            <td>Третья колонка</td>
+        </tr>
+    </table>
+    <p></p>
+    <table border="1">
+        <caption>Таблица 3</caption>
+        <tr>
+            <th colspan="2">Погода на завтра</th>
+        </tr>
+        <tr>
+            <td>днем</td>   
+            <td>отличный денек</td>            
+        </tr>
+        <tr>
+            <td>ночью</td>
+            <td>тихая звездная ночь</td>
+        </tr>
+    </table>
+    <p></p>
+    <table border="1">
+        <caption>Таблица 4</caption>
+        <tr>
+            <th rowspan="2">Погода на завтра</th>
+            <td>Днем - отличный денек</td>
+        </tr>
+        <tr>
+            <td>Ночью - тихая звездная ночь</td>
+        </tr>
+    </table>
+    <h2>Задание 3</h2>
+    <form>
+        <b>Введите текст:</b><br>
+        <textarea name="ключевоеслово" rows="5" cols="30">Область для ввода текста</textarea><br>
+        <input type="reset" value="очистка">
+    </form>
+    <p></p>
+    <b>Выберите:</b>
+    <select size="1">
+        <option value="1">First</option>
+        <option value="2">Second</option>
+        <option value="3">Third</option>
+        <option value="4">Fourth</option>
+    </select>
+    <p></p>
+    <form action="URL" method="post">
+        <label for="firstname">Имя: </label>
+        <input type="text" id="firstname"><br>
+        <label for="lastname">Фамилия: </label>
+        <input type="text" id="lastname"><br>
+        <label for="email">e-mail: </label>
+        <input type="text" id="email"><br>
+        <input type="radio" name="sex" value="Мужской">Мужской<br>
+        <input type="radio" name="sex" value="Женский">Женский<br>
+        <input type="submit" value="Отправить"><input type="reset" value="Сброс">
+    </form><br>
+    <a href="deadlines.html">Назад</a>
+</body>
+</html>

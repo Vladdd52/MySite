@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Практика №3</title>
+</head>
+<body>
+    <h2>Элемент Datalist</h2>
+    <form action="/" method="get">
+        <label for="language">Выберите язык:</label>
+        <input list="languages" name="language" id="language">
+        
+        <datalist id="languages">
+            <option value="C++">
+            <option value="Python"> 
+            <option value="PHP">
+            <option value="JavaScript">
+            <option value="Java">
+            <option value="ActionScript">
+        </datalist>
+        
+        <input type="submit" value="Отправить">
+    </form>
+    <h2>Элемент Output</h2>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0 <input type="range" id="a" min="0" max="100" value="50"> 100&nbsp;&nbsp;
+        + <input type="number" id="b" value="30" min="0">
+        = <output name="x"></output>
+    </form>
+    <h2>Тип ввода Color</h2>
+    <form>
+        <label for="mycolor">Выберите цвет:</label>
+        <input type="color" value="#00ff00" id="mycolor">
+    </form>
+    <h2>Тип ввода Data</h2>
+    <form>
+        <label for="mydate">Выберите дату:</label>
+        <input type="date" value="2025-03-08" id="mydate">
+    </form>
+    <h2>Тип ввода Email</h2>
+    <form>
+        <label for="myemail">Enter Email Address:</label>
+        <input type="email" id="myemail" required>
+    </form>
+    <h2>Элемент Аудио</h2>
+    <audio controls>
+        <source src="sounds/Asphalt8.mp3" type="audio/mpeg">
+        <source src="sounds/Asphalt8.ogg" type="audio/mpeg">
+        Ваш браузер не поддерживает аудиоэлемент HTML5.
+    </audio>
+    <br>
+    <a href="sounds/Asphalt8.mp3" download="sounds/Asphalt8.mp3">Скачать аудиофайл</a>
+    <h2>Элемент Видео</h2>
+    <video controls src="video\how_to_animation.mp4">
+        Ваш браузер не поддерживает видеоэлемент HTML5.
+    </video>
+    
+    <h2>Элемент Canvas<br>Анимация движущегося круга</h2>
+    <canvas id="canvas" width="400" height="200"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        let x = 50; 
+        let y = canvas.height / 2;
+        let radius = 20;
+        let speed = 2;
+        let direction = 1; 
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); 
+
+            
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.closePath();
+
+            
+            x += speed * direction;
+
+            
+            if (x + radius > canvas.width || x - radius < 0) {
+                direction *= -1;
+            }
+
+            requestAnimationFrame(animate); 
+        }
+
+        animate(); 
+    </script>
+</body>
+</html>
